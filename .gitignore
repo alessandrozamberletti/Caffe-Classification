@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# NetBeans specific (source: https://gist.github.com/chhh/4961200)
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
