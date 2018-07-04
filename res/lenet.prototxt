@@ -1,27 +1,24 @@
 # LeNet
 name: "LeNet"
 layer {
-  name: "train-data"
-  type: "Data"
+  name: "data"
+  type: "MemoryData"
   top: "data"
   top: "label"
-  data_param {
-    batch_size: 64
+  include {
+    phase: TEST
   }
-  include { stage: "train" }
+  memory_data_param {
+   batch_size: 1
+   channels: 3
+   height: 28
+   width: 28
+  }
+  transform_param {
+    mean_file: "res/mean.binaryproto"
+  }
 }
 layer {
-  name: "val-data"
-  type: "Data"
-  top: "data"
-  top: "label"
-  data_param {
-    batch_size: 32
-  }
-  include { stage: "val" }
-}
-layer {
-  # Use Power layer for input scaling
   name: "scale"
   bottom: "data"
   top: "scaled"
@@ -138,10 +135,7 @@ layer {
     lr_mult: 2
   }
   inner_product_param {
-    # Since num_output is unset, DIGITS will automatically set it to the
-    #   number of classes in your dataset.
-    # Uncomment this line to set it explicitly:
-    #num_output: 10
+    num_output: 10
     weight_filler {
       type: "xavier"
     }
@@ -151,25 +145,17 @@ layer {
   }
 }
 layer {
-  name: "accuracy"
-  type: "Accuracy"
-  bottom: "ip2"
-  bottom: "label"
-  top: "accuracy"
-  include { stage: "val" }
-}
-layer {
-  name: "loss"
-  type: "SoftmaxWithLoss"
-  bottom: "ip2"
-  bottom: "label"
-  top: "loss"
-  exclude { stage: "deploy" }
-}
-layer {
-  name: "softmax"
+  name: "prob"
   type: "Softmax"
   bottom: "ip2"
-  top: "softmax"
-  include { stage: "deploy" }
+  top: "prob"
+}
+layer {
+  name: "output"
+  type: "ArgMax"
+  bottom: "prob"
+  top: "output"
+  argmax_param {
+    out_max_val: true
+  }
 }
