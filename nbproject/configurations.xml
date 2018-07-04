@@ -8,6 +8,10 @@
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
+      <logicalFolder name="res" displayName="res" projectFiles="true">
+        <itemPath>res/lenet.prototxt</itemPath>
+        <itemPath>res/mean.binaryproto</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -26,6 +30,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>res</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Release" type="1">
@@ -52,6 +59,10 @@
         </linkerTool>
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="res/lenet.prototxt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="res/mean.binaryproto" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
