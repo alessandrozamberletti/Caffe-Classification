@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
     // classify
     std::vector<cv::Mat> inputData(1, img);
     inputLayer->AddMatVector(inputData, std::vector<int>(1));
-    const float* probs = net.ForwardPrefilled()[1]->cpu_data();
+    const float* probs = net.Forward()[1]->cpu_data();
     
     // print top-1 prediction
     std::string className;
