@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
     // initialize logging
     google::InitGoogleLogging(argv[0]);
     google::SetCommandLineOption("GLOG_minloglevel", "2");
-    
+
     // load network
     caffe::Net<float> net("res/deploy.prototxt", caffe::TEST);
     net.CopyTrainedLayersFrom("res/squeezenet_v1.1.caffemodel");
