@@ -18,20 +18,20 @@ int main(int argc, char** argv) {
     caffe::Net<float> net("res/deploy.prototxt", caffe::TEST);
     net.CopyTrainedLayersFrom("res/squeezenet_v1.1.caffemodel");
     
-    // load image
-    cv::Mat img = cv::imread("res/grumpy.jpg");
-    cv::resize(img, img, cv::Size(227, 227));
-    
-    // prepare input layer
+    // input layer
     boost::shared_ptr<caffe::MemoryDataLayer<float> > inputLayer;
     inputLayer = boost::static_pointer_cast<caffe::MemoryDataLayer<float> >(net.layer_by_name("data"));
+    
+    // load image
+    cv::Mat img = cv::imread("res/grumpy.jpg");
+    cv::resize(img, img, cv::Size(inputLayer->height(), inputLayer->width()));
 
     // classify
     std::vector<cv::Mat> inputData(1, img);
     inputLayer->AddMatVector(inputData, std::vector<int>(1));
     const float* probs = net.ForwardPrefilled()[1]->cpu_data();
     
-    // print top-1 class
+    // print top-1 prediction
     std::string className;
     std::ifstream ilsvrcClasses("res/imagenet-classes.txt");
     int class_id = 0;
