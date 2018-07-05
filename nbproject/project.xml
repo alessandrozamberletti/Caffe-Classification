@@ -24,9 +24,12 @@
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
             <word>caffemodel</word>
+            <word>imagenet</word>
             <word>jpg</word>
+            <word>minloglevel</word>
             <word>prototxt</word>
             <word>squeezenet</word>
+            <word>txt</word>
         </spellchecker-wordlist>
     </configuration>
 </project>

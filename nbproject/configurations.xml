@@ -64,6 +64,7 @@
             <linkerLibLibItem>opencv_imgproc</linkerLibLibItem>
             <linkerLibLibItem>boost_system</linkerLibLibItem>
             <linkerLibLibItem>glog</linkerLibLibItem>
+            <linkerLibLibItem>gflags</linkerLibLibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>

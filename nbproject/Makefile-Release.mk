@@ -52,7 +52,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L/usr/local/caffe09032017/lib -L/usr/local/opencv3rc1/lib -lcaffe -lopencv_core -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc -lboost_system -lglog
+LDLIBSOPTIONS=-L/usr/local/caffe09032017/lib -L/usr/local/opencv3rc1/lib -lcaffe -lopencv_core -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc -lboost_system -lglog -lgflags
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
