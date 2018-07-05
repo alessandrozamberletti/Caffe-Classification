@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
     inputLayer = boost::static_pointer_cast<caffe::MemoryDataLayer<float> >(net.layer_by_name("data"));
     
     // load image
-    cv::Mat img = cv::imread("res/grumpy.jpg");
+    cv::Mat img = cv::imread("res/cat.jpg");
     cv::resize(img, img, cv::Size(inputLayer->height(), inputLayer->width()));
 
     // classify
