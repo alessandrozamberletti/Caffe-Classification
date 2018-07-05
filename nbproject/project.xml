@@ -22,5 +22,11 @@
                 <project-formatting-style>false</project-formatting-style>
             </formatting>
         </data>
+        <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>caffemodel</word>
+            <word>jpg</word>
+            <word>prototxt</word>
+            <word>squeezenet</word>
+        </spellchecker-wordlist>
     </configuration>
 </project>

@@ -9,8 +9,11 @@
                    displayName="Resource Files"
                    projectFiles="true">
       <logicalFolder name="res" displayName="res" projectFiles="true">
-        <itemPath>res/lenet.prototxt</itemPath>
-        <itemPath>res/mean.binaryproto</itemPath>
+        <itemPath>res/deploy.prototxt</itemPath>
+        <itemPath>res/grumpy.jpg</itemPath>
+        <itemPath>res/imagenet-classes.txt</itemPath>
+        <itemPath>res/imagenet_mean.binaryproto</itemPath>
+        <itemPath>res/squeezenet_v1.1.caffemodel</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
@@ -55,14 +58,26 @@
           </linkerAddLib>
           <linkerLibItems>
             <linkerLibLibItem>caffe</linkerLibLibItem>
+            <linkerLibLibItem>opencv_core</linkerLibLibItem>
+            <linkerLibLibItem>opencv_highgui</linkerLibLibItem>
+            <linkerLibLibItem>opencv_imgcodecs</linkerLibLibItem>
+            <linkerLibLibItem>opencv_imgproc</linkerLibLibItem>
+            <linkerLibLibItem>boost_system</linkerLibLibItem>
+            <linkerLibLibItem>glog</linkerLibLibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="res/lenet.prototxt" ex="false" tool="3" flavor2="0">
+      <item path="res/deploy.prototxt" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="res/mean.binaryproto" ex="false" tool="3" flavor2="0">
+      <item path="res/grumpy.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="res/imagenet-classes.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="res/imagenet_mean.binaryproto" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="res/squeezenet_v1.1.caffemodel" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
