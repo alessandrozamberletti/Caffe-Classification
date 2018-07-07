@@ -10,6 +10,14 @@ sudo apt-get -y install build-essential cmake git libgtk2.0-dev pkg-config pytho
 ```
 * Install [OpenCV v3.0.0](https://github.com/opencv/opencv/archive/3.0.0.zip)
 ```console
+wget https://github.com/opencv/opencv/archive/3.0.0.zip &&
+unzip 3.0.0.zip &&
+cd opencv-3.0.0 &&
+mkdir build && 
+cd build && 
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local/opencv3rc1 -D WITH_IPP=OFF -D WITH_CUDA=OFF .. && 
+make -j`nproc --all` && 
+sudo make install -j`nproc --all`
 ```
 * Install [Caffe v1.0RC5](https://github.com/BVLC/caffe/archive/rc5.zip)
 ```console
