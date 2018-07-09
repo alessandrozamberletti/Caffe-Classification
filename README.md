@@ -1,5 +1,5 @@
-# caffe-opencv
-Image classification using Caffe and OpenCV in 50 lines of code
+# Caffe-OpenCV-Classification
+Image classification with Caffe and OpenCV in 50 lines of code
 
 ## Instructions [Ubuntu 16.04](http://releases.ubuntu.com/16.04/)
 * Install dependencies
