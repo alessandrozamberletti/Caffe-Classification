@@ -1,6 +1,11 @@
 # Caffe-Classification
 Image classification with Caffe and OpenCV in 50 lines of code
 
+<p align="center"> 
+  <img src="./res/cat.jpg" alt="margi" width="250" height="250"/>
+  <img src="./res/result.jpg" alt="margi"/>
+</p>
+
 ## Instructions [Ubuntu 16.04](http://releases.ubuntu.com/16.04/)
 * Install dependencies
 ```
@@ -37,5 +42,5 @@ sudo make distribute
 git clone https://github.com/alessandrozamberletti/Caffe-Classification.git &&
 cd Caffe-Classification &&
 make all &&
-./dist/Release/GNU-Linux/Caffe-Classification
+./dist/Release/GNU-Linux/caffe-classification
 ```
