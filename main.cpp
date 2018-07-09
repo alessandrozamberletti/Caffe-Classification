@@ -37,7 +37,7 @@ int main(int argc, char** argv) {
     int class_id = 0;
     while (std::getline(ilsvrcClasses, className)) {
         if(class_id++ == probs[0]) {
-            printf("Class: '%s'\tScore: %.2f", className.c_str(), probs[1]);
+            printf("Class: '%s'\tScore: %.2f\n", className.c_str(), probs[1]);
             break;
         }
     }
