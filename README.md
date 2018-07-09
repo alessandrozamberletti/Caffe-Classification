@@ -37,5 +37,5 @@ sudo make distribute
 git clone https://github.com/alessandrozamberletti/Caffe-Classification.git &&
 cd Caffe-Classification &&
 make all &&
-./dist/Release/GNU-Linux/caffe-opencv
+./dist/Release/GNU-Linux/Caffe-Classification
 ```
