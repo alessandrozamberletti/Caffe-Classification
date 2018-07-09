@@ -19,7 +19,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local/opencv3 -D 
 make -j`nproc --all` && 
 sudo make install
 ```
-* Install [Caffe v1.0RC5](https://github.com/BVLC/caffe/archive/rc5.zip)
+* Install [Caffe v1.0RC5](https://github.com/BVLC/caffe/archive/rc5.zip), commands are for CPU_ONLY version
 ```
 wget https://github.com/BVLC/caffe/archive/rc5.zip &&
 unzip rc5.zip &&
