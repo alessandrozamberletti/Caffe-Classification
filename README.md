@@ -1,4 +1,4 @@
-# Caffe-OpenCV-Classification
+# Caffe-Classification
 Image classification with Caffe and OpenCV in 50 lines of code
 
 ## Instructions [Ubuntu 16.04](http://releases.ubuntu.com/16.04/)
@@ -6,7 +6,7 @@ Image classification with Caffe and OpenCV in 50 lines of code
 ```
 sudo apt-get update &&
 sudo apt-get -y upgrade &&
-sudo apt-get -y install build-essential cmake libgtk2.0-dev pkg-config python-dev python-numpy libdc1394-22 libdc1394-22-dev libjpeg-dev libpng12-dev libtiff5-dev libjasper-dev libavcodec-dev libavformat-dev libswscale-dev libxine2-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev libv4l-dev libtbb-dev libqt4-dev libfaac-dev libmp3lame-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev x264 v4l-utils unzip libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler libboost-all-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libopenblas-dev wget libcurl4-openssl-dev libatlas-base-dev
+sudo apt-get -y install build-essential cmake libgtk2.0-dev pkg-config python-dev python-numpy libdc1394-22 libdc1394-22-dev libjpeg-dev libpng12-dev libtiff5-dev libjasper-dev libavcodec-dev libavformat-dev libswscale-dev libxine2-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev libv4l-dev libtbb-dev libqt4-dev libfaac-dev libmp3lame-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev x264 v4l-utils unzip libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler libboost-all-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libopenblas-dev wget libcurl4-openssl-dev libatlas-base-dev git
 ```
 * Install [OpenCV v3.0.0](https://github.com/opencv/opencv/archive/3.0.0.zip)
 ```
@@ -28,6 +28,14 @@ cp Makefile.config.example Makefile.config &&
 sed -i 's\# CPU_ONLY := 1\CPU_ONLY := 1\' Makefile.config &&
 sed -i 's\# USE_OPENCV := 0\USE_OPENCV := 1\' Makefile.config &&
 sed -i 's\# OPENCV_VERSION := 3\OPENCV_VERSION := 3\' Makefile.config &&
+sed -i 's\DISTRIBUTE_DIR := distribute\DISTRIBUTE_DIR := /usr/local/caffe' Makefile.config &&
 make all -j`nproc --all` &&
 sudo make distribute
+```
+* Clone and compile project
+```
+git clone https://github.com/alessandrozamberletti/Caffe-Classification.git &&
+cd Caffe-Classification &&
+make all &&
+./dist/Release/GNU-Linux/caffe-opencv
 ```
