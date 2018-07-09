@@ -44,3 +44,8 @@ cd Caffe-Classification &&
 make all &&
 ./dist/Release/GNU-Linux/caffe-classification
 ```
+
+## References
+[Caffe Deep learning framework](http://caffe.berkeleyvision.org/)  
+[SqueezeNet: AlexNet-level accuracy with 50x fewer parameters](https://github.com/DeepScale/SqueezeNet)  
+[OpenCV: Open Source Computer Vision Library](https://opencv.org/)
