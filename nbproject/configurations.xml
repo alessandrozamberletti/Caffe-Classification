@@ -28,14 +28,14 @@
       <compileType>
         <ccTool>
           <incDir>
-            <pElem>/usr/local/caffe09032017/include</pElem>
-            <pElem>/usr/local/opencv3rc1/include</pElem>
+            <pElem>/usr/local/caffe/include</pElem>
+            <pElem>/usr/local/opencv3/include</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
           <linkerAddLib>
-            <pElem>/usr/local/caffe09032017/lib</pElem>
-            <pElem>/usr/local/opencv3rc1/lib</pElem>
+            <pElem>/usr/local/caffe/lib</pElem>
+            <pElem>/usr/local/opencv3/lib</pElem>
           </linkerAddLib>
           <linkerLibItems>
             <linkerLibLibItem>caffe</linkerLibLibItem>

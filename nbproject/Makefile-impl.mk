@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=caffe-opencv
+PROJECTNAME=caffe-classification
 
 # Active Configuration
 DEFAULTCONF=Release

@@ -52,20 +52,20 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L/usr/local/caffe09032017/lib -L/usr/local/opencv3rc1/lib -lcaffe -lopencv_core -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc -lboost_system -lglog -lgflags
+LDLIBSOPTIONS=-L/usr/local/caffe/lib -L/usr/local/opencv3/lib -lcaffe -lopencv_core -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc -lboost_system -lglog -lgflags
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/caffe-opencv
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/caffe-classification
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/caffe-opencv: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/caffe-classification: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/caffe-opencv ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/caffe-classification ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/local/caffe09032017/include -I/usr/local/opencv3rc1/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I/usr/local/caffe/include -I/usr/local/opencv3/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:
